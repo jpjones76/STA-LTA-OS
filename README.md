@@ -1,4 +1,4 @@
-# STA-LTA-OS: STA-LTA with outlier statistics
+# STA-LTA-OS: Adaptive STA-LTA with outlier statistics
 
 ## Introduction
 This is the online repository for code from `[1]`. Code is stable, semi-flexible, and has been cleaned and optimized from the original scripts.
@@ -21,8 +21,8 @@ This program can be used without modification by creating a matrix **X** of colu
 * **hmminit**: Set initial HMM parameters.
 * **sop**: Event detection and picking from short-term averages of outlier probabilities.
 
-### VISUALIZING RESULTS
-One easy way to determine whether this program is working as expected is to compare the results of **exmax** using histograms. For example, the code below is a complete command sequence for one run of **exmax** using an exponential solver, with corresponding histogram plots, bypassing **hmmscan** completely:
+### Visualizing Results
+One easy way to determine whether this program is working as expected is to compare the results of **exmax** using histograms. For example, the code below is a complete command sequence for one run of **exmax** using an exponential solver, with corresponding histogram plots. It bypasses **hmmscan** completely.
  
  `Y = genprep(X,{'demean'; 'abs'});`
 
