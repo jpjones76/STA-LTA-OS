@@ -28,11 +28,11 @@ One easy way to determine whether this program is working as expected is to comp
 
  `[h0,y0] = hist(Y,100); dy = y0(2)-y0(1); h0 = h0./max(h0); t1 = 0:dy:max(Y);`
 
- `[P,f,Q] = exmax(Y,'cf','abs','slv','exp');`
+ `[P,f,Q] = exmax(Y,'cf','abs','slv','exp'); m1 = Q{1}(1,1); m0 = Q{1}(2,1);`
 
- `y1 = (1/S.m(2))*exp(-t1./S.m(2)); y1 = y1./max(y1);`
+ `y1 = (1/m1)*exp(-t1./m1); y1 = y1./max(y1);`
 
- `y0 = (1/S.m(1))*exp(-t1./S.m(1)); y0 = y1./max(y0);`
+ `y0 = (1/m0)*exp(-t1./m0); y0 = y1./max(y0);`
 
  `figure; hold on; bar(y0,h0,1); xlim([0 max(y0)]); `
 
