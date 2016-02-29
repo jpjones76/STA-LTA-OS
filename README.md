@@ -10,8 +10,7 @@ STA-LTA with outlier statistics improves detection and picking accuracy, particu
 In these programs, STA-LTA is recast as an outlier statistics problem using a two-state hidden Markov model (HMM), which I resolve with an expectation-maximization (EM) algorithm to determine the state membership probabilities of transformed data points.
 
 ## Use
-This program can be used without modification by creating a matrix **X** of column vector data and typing the command 
-`Ev = hmmscan(X);`
+This program can be used without modification by creating a matrix **X** of column vector data and typing the command `Ev = hmmscan(X);`. The resultant structure **Ev** contains event start times (Ev.s), end times (Ev.e), P-picks (Ev.p), etc. Type `help hmmscan` for more details.
 
 ### Descriptions of Individual Programs
 * **hmmscan**: Scan a record of data by applying EM to successive long data windows.
