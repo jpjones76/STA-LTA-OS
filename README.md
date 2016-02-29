@@ -40,7 +40,7 @@ One easy way to determine whether this program is working as expected is to comp
 
 ### Limitations
 1. Because **hmmscan** expects a matrix of data in column vectors, it's implicitly assumed that data are sampled at a uniform rate and time-synched.
-2. The default program options are intended for borehole data sampled at 4 kHz.
+2. The default program options are intended for borehole data sampled at 4 kHz. You'll need to modify many of them to use these routines on seismic network data.
 
 ### Supplemental Notes
 1. Program **exmax** contains two solvers that weren't used in the paper: An ordinary Gaussian solver (opts.slv = 'gauss') and a questionable (i.e. possibly wrong) solver for beta distributions (opts.slv = 'beta'). I only tested the beta solver to the extent that I can confidently say it usually converges when fed a time series of beta-distributed coefficients. Use at your peril.
