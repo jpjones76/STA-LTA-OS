@@ -24,17 +24,17 @@ This program can be used without modification by creating a matrix **X** of colu
 ### VISUALIZING RESULTS
 One easy way to determine whether this program is working as expected is to compare the results of **exmax** using histograms. For example, the code below is a complete command sequence for one run of **exmax** using an exponential solver, with corresponding histogram plots, bypassing **hmmscan** completely:
  
- `Y = genprep(X,{'demean'; 'abs'});
- [h0,y0] = hist(Y,100);
- dy = y0(2)-y0(1);
- h0 = h0./max(h0);
- [P,f,Q] = exmax(Y,'cf','abs','slv','exp');
- t1 = 0:dy:max(Y);
- y1 = (1/S.m(2))*exp(-t1./S.m(2)); y1 = y1./max(y1);
- y0 = (1/S.m(1))*exp(-t1./S.m(1)); y0 = y1./max(y0);
- figure; hold on; bar(y0,h0,1); xlim([0 max(y0)]); 
- plot(t1,y1,'k-','linewidth',2);
- plot(t1,y0,'k--','linewidth',2);`
+ `Y = genprep(X,{'demean'; 'abs'});`
+ `[h0,y0] = hist(Y,100);`
+ `dy = y0(2)-y0(1);`
+ `h0 = h0./max(h0);`
+ `[P,f,Q] = exmax(Y,'cf','abs','slv','exp');`
+ `t1 = 0:dy:max(Y);`
+ `y1 = (1/S.m(2))*exp(-t1./S.m(2)); y1 = y1./max(y1);`
+ `y0 = (1/S.m(1))*exp(-t1./S.m(1)); y0 = y1./max(y0);`
+ `figure; hold on; bar(y0,h0,1); xlim([0 max(y0)]); `
+ `plot(t1,y1,'k-','linewidth',2);`
+ `plot(t1,y0,'k--','linewidth',2);`
  
 ### Limitations
 1. Because **hmmscan** expects a matrix of data in column vectors, it's implicitly assumed that data are sampled at a uniform rate and time-synched.
